@@ -1,0 +1,166 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  transition: all .3s ease-in-out;
+}
+
+:root{
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 2000px;
+  min-width: 300px; 
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.Home-page{
+  padding: 1rem 5rem;
+}
+.Home-page>h1{
+  margin:1rem 0rem;
+  font-size: 3rem;
+}
+.Home-page>input{
+  display: block;
+  width: 140rem;
+  height: 5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.Home-page>button{
+  padding: 1.5rem 5rem;
+  color: #fff;
+  background-color: black;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+.PostOfficeList{
+  font-size: 2rem;
+  padding-left: 5rem;
+  margin-top: 2rem;
+}
+
+.Input-class{
+  position: relative;
+}
+.Icon{
+  position: absolute;
+  left: 1rem;
+  top: 2.5rem;
+  font-size: 4rem;
+  text-align: center;
+}
+.Input-class>input{
+  width: 130rem;
+  height: 5rem;
+  padding-left: 6rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
+}
+.OfficeListCards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.Office-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  gap: 3rem;
+  width: 62.5rem;
+  padding-left: 1.5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+}
+
+.Loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: relative;
+  animation: rotate 1s linear infinite
+}
+.loader::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  inset: 0px;
+  border-radius: 50%;
+  border: 5px solid #211f1f;
+  animation: prixClipFix 2s linear infinite ;
+}
+
+@keyframes rotate {
+  100%   {transform: rotate(360deg)}
+}
+
+@keyframes prixClipFix {
+    0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+    25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+    50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+    75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+    100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}  
+
+
+@media screen and (max-width: 480px){
+  .Home-page{
+    padding-left: 1rem;
+    /* font-size: 0.5rem; */
+  }
+
+  .Home-page>input{
+    padding-left: 1rem;
+    width: 35rem;
+  }
+  .Home-page>button{
+    padding: 1rem 2rem;
+  }
+  .PostOfficeList{
+    font-size: 1rem;
+  }
+  .PostOfficeList{
+    padding-left: 2rem;
+    gap:2rem;
+  }
+  .Input-class>input{
+    width: 35rem;
+    margin-bottom: 2rem;
+  }
+  .OfficeListCards{
+    gap: 2rem;
+  }
+  .Office-card{
+    width: 35rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    gap:1.5rem;
+  }
+
+}
